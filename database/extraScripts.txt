@@ -1,0 +1,3 @@
+db.tipo_reporte.insertMany([{"nombre": "Asalto"},{"nombre": "Robo"},{"nombre": "Tiroteo"},{"nombre": "Acoso"},{"nombre": "Secuestro"}]);
+db.reportes.insertOne({"id_usuario": ObjectId("5dafb79d8edae3192330d2b9"), "fecha": new Date(), "ubicacion": "Aqui cerca de mi casita", "positivos": 144, "negativos": 5, tipo_reporte: ObjectId("5dbe39e75e3845d362744ebe"), latitud: 0, longitud: 0, emergencia: false});
+db.reportes_imagenes.insertOne({"id_reporte": ObjectId("5dbe3a855e3845d362744ec1"), "imagen": "https://mesafe.blob.core.windows.net/reporte-5dd0a6449546d22a20a421f5/reporte1", "reportes_censura": 0, "estatus": "A"});

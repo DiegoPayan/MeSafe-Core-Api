@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    volumes:
+      - ./mongo-volume:/data/db
+
+  cancerberus:
+    image: registry.itculiacan.edu.mx/equipo2/cancerberus-api
+    container_name: cancerberus
+    restart: always
+    ports:
+      - 5000:80
+
+  backend:
+    image: backend
+    container_name: backend
+    restart: always
+    ports:
+      - 5100:80
+    links:
+      - cancerberus
+    depends_on:
+      - cancerberus
+      - mongo
+
+  frontend:
+    image: registry.itculiacan.edu.mx/equipo2/frontend
+    container_name: front
+    ports:
+      - 3000:80
+    links:
+      - backend
+    depends_on:
+      - backend

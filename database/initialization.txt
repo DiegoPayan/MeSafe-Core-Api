@@ -1,0 +1,2 @@
+db.roles.insertMany([{"nombre": "Administrador"},{"nombre": "Cuerpo de proteccion"},{"nombre": "Ciuidadano"}]);
+db.usuarios.insertOne({"nombres": "Diego Armando", "apellidos": "Payan Lopez", "email": "diegogmr1335@gmail.com", "password": "12345", "estado": "Sinaloa", "municipio": "Culiacan", "colonia": "Issstesin", "genero": "M", "edad": "22", "ocupacion": "Desarrollador de SW", "celular": "6672145465", "id_rol" : "5dede7d9406b030ee5d9c03f", "imagen": "", "registro_completo": "0", "censura_imagenes": "0", "estatus": "0" });
